@@ -7,7 +7,7 @@
                 class="list-item" 
                 :class="{important: todo.isImportant, done: todo.isDone}" 
                 v-for="(todo, index) in todoList" 
-                :key="index" 
+                :key="todo.id" 
                 @click="todo.isDone = !todo.isDone"
             >
                 <span class="todo-text">{{index + 1}}. {{ todo.todo }}</span>
