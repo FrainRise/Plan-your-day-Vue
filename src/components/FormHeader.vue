@@ -3,19 +3,19 @@
     <div class="date-row">
       <div class="date-column">
         <span class="date-label day-number">
-          {{ date.getDate() }}
+          {{ getDayNumber }}
         </span>
         <span class="date-label day-month">
-          {{ months[date.getMonth()]}}
+          {{ getMonth }}
         </span>
         
       </div>
       <div class="date-column">
         <span class="date-label day">
-          {{ days[date.getDay()] }}
+          {{ getDay }}
         </span>
         <span class="date-label day-year">
-          {{ date.getFullYear() }}
+          {{ getYear }}
         </span>
       </div> 
     </div>
@@ -33,6 +33,20 @@ export default {
             'Aug', 'Sep', 'Oct', 'Nov', 'Dec',]
             
         }
+    },
+    computed: {
+      getDayNumber: function() {
+        return this.date.getDate()
+      },
+      getMonth: function() {
+        return this.months[this.date.getMonth()]
+      },
+      getDay: function() {
+        return this.days[this.date.getDay()]
+      },
+      getYear: function() {
+        return this.date.getFullYear()
+      }
     }
 }
 </script>
