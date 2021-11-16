@@ -1,5 +1,7 @@
 # Plan your day
-  A simple ToDo list application that lets you keep track of your daily activities. You can create daily tasks and track it through the day
+  A simple ToDo list application that lets you keep track of your daily activities.
+  It gives you the ability to create daily tasks and track their completion.
+  
 ## Project setup
 ```
 npm install
